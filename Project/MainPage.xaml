@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:Project.ForEntry"
+             x:Class="Project.MainPage"
+              xmlns:Resource="clr-namespace:Project.Helper"  
+             BackgroundColor="White">
+
+    <StackLayout Padding="3" BackgroundColor="White">
+        <StackLayout Orientation="Vertical" >
+            <Grid HeightRequest="400"
+                  HorizontalOptions="Center"
+                      WidthRequest="380"
+                 
+                  
+                  >
+                <Image Source= "image.png"
+       Aspect="AspectFit"
+       HorizontalOptions="Center" Margin="0,0,0,70"
+                       />
+                <Label 
+                     Text="{x:Static Resource:AppResource.String1}"
+                    x:Name="label1"  
+
+                       FontSize="17"  HorizontalOptions="Center"
+                    MaxLines="2"
+                       Margin="0,250,0,0" FontAttributes="Bold" />
+                <Label 
+                    Text="{x:Static Resource:AppResource.String2}"
+                    x:Name="label2"  
+HorizontalOptions="Center"
+                       FontSize="17" 
+                    MaxLines="2"
+                       Margin="0,270,0,0" Padding="5,0,0,0" FontAttributes="Bold" />
+            </Grid>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" >
+                    <Grid HeightRequest="400"
+                  HorizontalOptions="Center"
+                      WidthRequest="350"
+                 
+                         Padding="0,10,0,0" 
+                  
+                  >
+
+                <Label  Text="{x:Static Resource:AppResource.String3}"
+         FontSize="19"
+         HorizontalOptions="Center"
+                       x:Name="label3"  
+               Margin="0" FontAttributes="Bold" ></Label>
+
+                
+
+            </Grid>
+        </StackLayout>
+
+
+        <Image Source="image_1.png" Margin="275,0,0,25">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                
+                NumberOfTapsRequired="1" 
+                    Tapped="OnImageNameTapped"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+      
+
+
+
+    </StackLayout>
+
+
+
+
+
+
+
+</ContentPage>

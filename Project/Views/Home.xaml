@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           
+             xmlns:Resource="clr-namespace:Project.Helper" 
+  
+              x:Class="Project.Views.Home"
+  
+             Visual="Material"
+      
+             
+            >
+
+
+    <ContentPage.Content>
+        <StackLayout 
+        
+            BackgroundColor="White" Padding="0" Margin="0">
+
+
+            <StackLayout
+               
+               WidthRequest="200"
+                HeightRequest="100"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal" Padding="0" Margin="0,40,0,0">
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    Source="image.png" Margin="60,0,0,0"></Image>
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical" 
+                           
+                         HeightRequest="150"
+                         
+                        WidthRequest="100"
+                         Spacing="3" Margin="0,0,0,0" Padding="0" 
+                        >
+                <Label 
+                  
+                    Text="{x:Static Resource:AppResource.h1}"
+                    x:Name="l1" FontSize="17"   HorizontalOptions="Center" FontAttributes="Bold"
+        />
+               
+
+                    <Grid
+                          
+                        HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="155" Padding="0,20,0,0"
+                  >
+                        <Button BorderRadius="11"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        BorderWidth="1"
+                           Clicked="ADD"
+                                 FontSize="15"
+                Text="{x:Static Resource:AppResource.h2}"
+                    x:Name="l2"
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="#C4DBC7"          
+       
+          FontFamily="Regular"
+           FontAttributes="Bold"
+          Padding="0">
+                        </Button>
+
+                    
+
+
+                </Grid>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical" 
+                           
+                         HeightRequest="150"
+                         
+                        WidthRequest="100"
+                         Spacing="3" Margin="0" Padding="0" 
+                        >
+                <Label   Text="{x:Static Resource:AppResource.h3}"
+                    x:Name="l3" FontSize="17"   HorizontalOptions="Center" FontAttributes="Bold"
+        />
+
+
+                <Grid
+                          
+                        HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="155" Padding="0,20,0,0"
+                  >
+                    <Button BorderRadius="11"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        BorderWidth="1"
+                       
+               Text="{x:Static Resource:AppResource.h4}"
+                    x:Name="l4"
+                            Clicked="IdeaBank_Clicked"
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="#C4DBC7"          
+         FontSize="15"
+          FontFamily="Regular"
+           FontAttributes="Bold"
+          Padding="0">
+                    </Button>
+
+
+
+
+                </Grid>
+
+            </StackLayout>
+
+
+
+
+            <Image
+                Source="under2.png"
+                Aspect="AspectFill"
+                
+                HeightRequest="220">
+
+            </Image>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+
+

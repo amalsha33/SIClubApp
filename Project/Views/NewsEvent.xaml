@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:Resource="clr-namespace:Project.Helper"  
+           x:Class="Project.Views.NewsEvent">
+
+        <ContentPage.Content>
+            <StackLayout  Orientation="Vertical"  BackgroundColor="White">
+
+
+            <StackLayout
+            
+                Spacing="270"
+                HeightRequest="100"
+                 
+                Orientation="Horizontal">
+
+                <Grid  
+            
+                    Margin="25,17,0,0"
+             >
+                    <Image Source= "back.png" 
+                              
+                     Aspect="AspectFit"
+                           
+                          >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                
+                NumberOfTapsRequired="1" 
+                    Tapped="OnImageNameTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                </Grid>
+                <Grid 
+                          HeightRequest="100"
+                               WidthRequest="100"
+                          Margin="0,17,0,0"
+                    >
+
+                    <Image Source= "image.png"
+                              HeightRequest="100"
+                               WidthRequest="100"
+                              
+                              />
+
+                </Grid>
+            </StackLayout>
+            <Grid  HorizontalOptions="Center"
+                     HeightRequest="60"
+                      WidthRequest="320"
+                  Margin="0,20,0,0"
+                      
+                  >
+                <Label  Text="{x:Static Resource:AppResource.news}"
+                    x:Name="label"  FontSize="25"  HorizontalOptions="Center"
+                   FontAttributes="Bold" Margin="0,10,0,0" />
+                </Grid>
+            <StackLayout Orientation="Vertical" 
+                           
+                         HeightRequest="550"
+                       
+                         Spacing="30" Margin="0,30,0,0" Padding="0" 
+                        >
+                <Grid HeightRequest="80"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                      
+                  >
+
+                    <Label
+                            Padding="12,12,0,0"
+                            FontSize="20"  
+                             HeightRequest="50"  
+                              BackgroundColor="#89AC8E"
+                           x:Name="new1"
+                             TextColor="Black"  
+                             FontAttributes="Bold"/>
+
+
+
+                </Grid>
+                <Grid HeightRequest="80"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                      
+                  >
+
+                    <Label
+                        Padding="12,12,0,0"
+                            FontSize="20"  
+                             HeightRequest="50"  
+                              BackgroundColor="#C4DBC7"
+                             x:Name="event1"
+                             TextColor="Black"  
+                             FontAttributes="Bold"/>
+
+
+
+                </Grid>
+                <Grid HeightRequest="80"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                      
+                  >
+
+                    <Label
+                         Padding="12,12,0,0"
+                            FontSize="20"  
+                             
+                             HeightRequest="50"  
+                              BackgroundColor="#89AC8E"
+                              x:Name="new2"
+                             TextColor="Black"  
+                             FontAttributes="Bold"/>
+
+
+
+                </Grid>
+                <Grid HeightRequest="80"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                      
+                  >
+
+                    <Label
+                        Padding="12,12,0,0"
+                            FontSize="20"   
+                             HeightRequest="50"  
+                              BackgroundColor="#C4DBC7"
+                             x:Name="event2"
+                             TextColor="Black"  
+                             FontAttributes="Bold"/>
+
+
+
+                </Grid>
+                
+
+
+
+
+
+
+
+
+
+            </StackLayout>
+
+            </StackLayout>
+
+        </ContentPage.Content>
+    </ContentPage>

@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="Project.Views.Consultants"
+    xmlns:Resource="clr-namespace:Project.Helper"  
+           >
+
+        <ContentPage.Content>
+            <StackLayout  Orientation="Vertical"  BackgroundColor="White">
+
+                <StackLayout
+             
+                Spacing="270"
+                HeightRequest="150"
+                Orientation="Horizontal">
+
+                    <Grid  
+               WidthRequest="40"
+                    Margin="25,17,0,0"
+             >
+                        <Image Source= "back.png" 
+                     Aspect="AspectFit" 
+                           
+                          >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                
+                NumberOfTapsRequired="1" 
+                    Tapped="OnImageNameTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    </Grid>
+                    <Grid Margin="0,16,0,0" 
+                    >
+
+                        <Image Source= "image.png" Aspect="AspectFit"/>
+
+                    </Grid>
+                </StackLayout>
+                <Grid  HorizontalOptions="Center"
+                     HeightRequest="60"
+                      WidthRequest="320"
+                   Margin="0,0,0,20"
+                  >
+                <Label  Text="{x:Static Resource:AppResource.adviser}"
+                    x:Name="label" FontSize="25"  HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+                </Grid>
+<StackLayout Orientation="Vertical" Spacing="5">
+            <StackLayout Orientation="Horizontal"
+                        HorizontalOptions="Center"
+                         Spacing="30
+                         " Padding="0" >
+
+                <Grid
+                    HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="160" Padding="0,20,0,0"
+                  >
+                    <Button BorderRadius="5"
+                       HeightRequest="5"
+                        BorderWidth="1"
+                            
+              
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+               BackgroundColor="#89AC8E"
+                         Clicked="ShopIDSubmit1_Clicked"
+                       Text="{x:Static Resource:AppResource.ad1}"
+                    x:Name="label1"
+                        FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                    </Button>
+
+                </Grid>
+                <Grid 
+                    HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="160" Padding="0,20,0,0"
+                  >
+                    <Button BorderRadius="5"
+                       
+                        BorderWidth="1"
+                            
+             
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="#89AC8E"
+                         
+                      Clicked="ShopIDSubmit2_Clicked"
+                      Text="{x:Static Resource:AppResource.ad2}"
+                    x:Name="label2" FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                    </Button>
+
+                </Grid>
+
+
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                        HorizontalOptions="Center"
+                         Spacing="30
+                         " Padding="0" >
+
+                    <Grid HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="160" Padding="0,20,0,0"
+                  >
+                            <Button BorderRadius="5"
+                       
+                        BorderWidth="1"
+                            Clicked="ShopIDSubmit3_Clicked"
+               
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+               BackgroundColor="#C4DBC7"
+                         Text="{x:Static Resource:AppResource.ad3}"
+                    x:Name="label3"
+                      
+                       FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                            </Button>
+
+                        </Grid>
+                    <Grid  HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="160" Padding="0,20,0,0"
+                  >
+                            <Button BorderRadius="5"
+                       
+                        BorderWidth="1"
+                            Clicked="ShopIDSubmit4_Clicked"
+              
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="#C4DBC7"
+                         
+                     Text="{x:Static Resource:AppResource.ad4}"
+                    x:Name="label4" FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                            </Button>
+
+                        </Grid>
+
+
+
+                    </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                        HorizontalOptions="Center"
+                         Spacing="30
+                         " Padding="0">
+
+                    <Grid  HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="160" Padding="0,20,0,0"
+                  >
+                    <Button BorderRadius="5"
+                       Clicked="ShopIDSubmit5_Clicked"
+                        BorderWidth="1"
+                            
+            
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+               BackgroundColor="#89AC8E"
+                         Text="{x:Static Resource:AppResource.ad5}"
+                    x:Name="label5"
+                      
+                         FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                    </Button>
+
+                </Grid>
+                    <Grid  HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="160" Padding="0,20,0,0"
+                  >
+                    <Button BorderRadius="5"
+                       Clicked="ShopIDSubmit6_Clicked"
+                        BorderWidth="1"
+                            
+           
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="#89AC8E"
+                         
+                    Text="{x:Static Resource:AppResource.ad6}"
+                    x:Name="label6" FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                    </Button>
+
+                </Grid>
+
+
+
+            </StackLayout>
+
+
+
+
+            <StackLayout Orientation="Horizontal"
+                        HorizontalOptions="Center"
+                         Spacing="30
+                         " Padding="0" Margin="0,0,0,40">
+
+                    <Grid  HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="160" Padding="0,20,0,0"
+                  >
+                    <Button BorderRadius="5"
+                       
+                        BorderWidth="1"
+                            
+              
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+               BackgroundColor="#C4DBC7"
+                         
+                      Clicked="ShopIDSubmit7_Clicked"
+                      Text="{x:Static Resource:AppResource.ad7}"
+                    x:Name="label7" FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                    </Button>
+
+                </Grid>
+                    <Grid  HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="160" Padding="0,20,0,0"
+                  >
+                    <Button BorderRadius="5"
+                       
+                        BorderWidth="1"
+              
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="#C4DBC7"
+                         Text="{x:Static Resource:AppResource.ad8}"
+                    x:Name="label8"
+                      Clicked="ShopIDSubmit8_Clicked"
+                       FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                    </Button>
+
+                </Grid>
+
+
+
+            </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+
+        </ContentPage.Content>
+    </ContentPage>

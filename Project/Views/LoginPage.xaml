@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Resource="clr-namespace:Project.Helper" 
+             xmlns:custom="clr-namespace:Project.ForEntry"
+             x:Class="Project.Views.LoginPage"
+             xmlns:Models ="clr-namespace:Project.Models" xmlns:Controls="clr-namespace:Project.Helper">
+    <ContentPage.BindingContext>
+        <Models:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout  Padding="3" BackgroundColor="White">
+      
+        <StackLayout Orientation="Vertical" >
+            <Grid HeightRequest="350"
+                  HorizontalOptions="Center"
+                      WidthRequest="350"
+                  
+                  >
+                <Image Source= "image.png"
+       Aspect="AspectFit"
+       HorizontalOptions="Center" Margin="0,0,0,70"
+                       />
+                <Label  Text="{x:Static Resource:AppResource.String4}"
+                          x:Name="label4"  
+                        FontSize="Title"  HorizontalOptions="Center"
+                         
+                       Margin="0,180,0,0" />
+                <Label  Text="{x:Static Resource:AppResource.String5}"  x:Name="label5"   FontSize="Title" HorizontalOptions="Center"
+               Margin="0,230,0,0"></Label>
+            </Grid>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" Spacing="15"  Margin="0,0,0,50">
+            <Grid HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                  >
+
+                <Controls:XEditor 
+                            
+                             FontSize="17"  
+                             HeightRequest="50"  
+                    BackgroundColor="#EFEFEF"
+                     
+                               Placeholder="{x:Static Resource:AppResource.f2}"
+                    x:Name="p2" 
+                             Text="{Binding Username}"
+                             PlaceholderColor="#A1A1A1"
+                             TextColor="Black"  
+                             FontAttributes="Bold" />
+
+
+
+
+
+
+            </Grid>
+            
+            <Grid HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                  >
+                <Controls:XEditor 
+                              
+                             FontSize="17"  
+                             HeightRequest="50" 
+                    Text="{Binding Password}" 
+                
+                      BackgroundColor="#EFEFEF"
+                             Placeholder="{x:Static Resource:AppResource.f3}"
+                    x:Name="p3"   
+                             PlaceholderColor="#A1A1A1"
+                             TextColor="Black"  
+                             FontAttributes="Bold"  
+                             WidthRequest="100"/>
+
+
+
+            </Grid>
+
+            <StackLayout Orientation="Vertical"
+                      Margin="0,0,0,0">
+
+                <Label   Text="{x:Static Resource:AppResource.String6}"
+                           x:Name="label6"  
+                         FontSize= "15"
+               HorizontalOptions="Center" TextDecorations="Underline"       />
+
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical"
+                      
+                         Spacing="12
+                         ">
+                <Grid HeightRequest="50"
+                  HorizontalOptions="Center"
+                      WidthRequest="180"
+                  >
+                    <Button BorderRadius="11"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        BorderWidth="1"
+                            
+              
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="White"
+                             CommandParameter="Login"
+                        Command="{Binding LoginCommand}"
+                              x:Name="label7"  
+                        Text="{x:Static Resource:AppResource.String7}" FontFamily="Regular" FontAttributes="Bold">
+                    </Button>
+
+                </Grid>
+
+
+                <Label 
+                      x:Name="label8"  
+                    Text="{x:Static Resource:AppResource.String8}" FontSize= "20"
+                   HorizontalOptions="Center" FontAttributes="Bold" />
+
+                <Grid HeightRequest="50"
+                  HorizontalOptions="Center"
+                      WidthRequest="180"
+                  >
+                    <Button BorderRadius="11"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        BorderWidth="1"
+              
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="White"
+                             Clicked="Signup"
+                              x:Name="label9"  
+                       Text="{x:Static Resource:AppResource.String9}">
+
+                    </Button>
+
+
+                </Grid>
+
+                <Grid HeightRequest="50"
+                  HorizontalOptions="Center"
+                      WidthRequest="180"
+                  >
+                    <Button BorderRadius="10"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        BorderWidth="1"
+              
+                     Clicked="Guest"
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="White"
+                              x:Name="label10"  
+                        Text="{x:Static Resource:AppResource.String10}">
+
+                    </Button>
+
+
+                </Grid>
+
+
+
+
+
+
+            </StackLayout>
+
+
+        </StackLayout>
+
+    
+
+
+
+    </StackLayout>
+
+</ContentPage>

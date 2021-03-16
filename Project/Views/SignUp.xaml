@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           
+             x:Class="Project.Views.SignUp"
+              xmlns:Resource="clr-namespace:Project.Helper"  
+                xmlns:custom="clr-namespace:Project.ForEntry"
+            
+    xmlns:Models ="clr-namespace:Project.Models" xmlns:Controls="clr-namespace:Project.Helper"
+             Visual="Material"
+           
+             
+            >
+    
+    <ContentPage.BindingContext>
+        <Models:RegisterViewModel/>
+    </ContentPage.BindingContext>
+  
+    <ContentPage.Content>
+        <StackLayout   BackgroundColor="White">
+
+          
+                <Grid 
+                    
+                    Margin="285,5,0,0">
+
+
+
+
+                    <Image Source= "image.png"
+                
+       Aspect="AspectFit"
+       >
+                        
+                    </Image>
+                </Grid>
+            <Label 
+                Text="{x:Static Resource:AppResource.String13}"
+                    x:Name="label13"  
+                FontSize="Title"  HorizontalOptions="Center"
+                       Margin="0,0,0,30" />
+
+
+
+
+
+            <StackLayout Orientation="Vertical" 
+                           
+                         HeightRequest="550
+                         
+                         "
+                         Spacing="20" Margin="0" Padding="0" 
+                        >
+                <Grid HeightRequest="55"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                      
+                  >
+
+                    <Controls:XEditor 
+                              
+                             FontSize="17"  
+                             HeightRequest="50"  
+                    BackgroundColor="#EFEFEF"
+                   
+                              Placeholder="{x:Static Resource:AppResource.f1}"
+                    x:Name="p1" 
+                             Text="{Binding Username}"
+                             PlaceholderColor="#A1A1A1"
+                             TextColor="Black"  
+                             FontAttributes="Bold"/>
+
+
+
+                </Grid>
+                <Grid HeightRequest="50"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                      
+                  >
+
+                    
+
+                        <Controls:XEditor  
+                               MaxLength="50"
+                             HeightRequest="50"  
+                    BackgroundColor="#EFEFEF"
+                    
+                             Placeholder="{x:Static Resource:AppResource.f2}"
+                    x:Name="p2" 
+                             Text="{Binding Email}"
+                             PlaceholderColor="#A1A1A1"
+                           
+                             FontAttributes="Bold"
+                               TextColor="Black"  />
+                
+                   
+
+
+
+
+                </Grid>
+               
+                <StackLayout 
+                       Orientation="Horizontal"
+                    Padding="45,0,0,0">
+                    <Grid HeightRequest="50"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                          
+                   
+                  >
+                        <Controls:XEditor 
+                            
+                             FontSize="17"  
+                             HeightRequest="50" 
+                    
+                    Text="{Binding Password}" 
+                      
+                   
+                      BackgroundColor="#EFEFEF"
+                               Placeholder="{x:Static Resource:AppResource.f3}"
+                    x:Name="p3" 
+                             PlaceholderColor="#A1A1A1"
+                             TextColor="Black"  
+                             FontAttributes="Bold"  
+                             WidthRequest="100"
+                          
+                        />
+
+
+                    </Grid>
+               
+            
+                </StackLayout>
+                <Grid HeightRequest="60"
+                  HorizontalOptions="Center"
+                      WidthRequest="320"
+                      
+                  >
+                    <Controls:XEditor  
+                                
+                             FontSize="17"  
+                             HeightRequest="50"  
+                    BackgroundColor="#EFEFEF"
+                     Placeholder="{x:Static Resource:AppResource.f4}"
+                    x:Name="p4"  
+                          
+                            Text="{Binding ConfirmPassword}"
+                             PlaceholderColor="#A1A1A1"
+                             TextColor="Black"  
+                             FontAttributes="Bold"/>
+
+
+
+
+                </Grid>
+
+
+                <StackLayout Orientation="Vertical"
+                       
+                         Spacing="10
+                         ">
+                    <StackLayout
+                         HorizontalOptions="Center"
+                        Orientation="Horizontal">
+                 
+                            <RadioButton   
+                      GroupName="Remember"   
+                              IsChecked="{Binding IsStudent}" 
+                         />
+
+                        <Label  Text="{x:Static Resource:AppResource.String15}"
+                    x:Name="label15"   FontSize="15" Margin="0,0,80,0" Padding="0,3,0,0" 
+                      />
+                        
+
+                        <RadioButton   
+                          GroupName="Remember"   
+                            IsChecked="False"   
+                      />
+                        <Label   Text="{x:Static Resource:AppResource.String16}"
+                    x:Name="label16"  
+                               FontSize="15"
+                                Padding="0" Margin="0,1,0,0"
+                     />
+                    </StackLayout>
+                    <Grid HeightRequest="50"
+                  HorizontalOptions="Center"
+                      WidthRequest="180" Padding="0,20,0,0"
+                  >
+                        <Button BorderRadius="11"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        BorderWidth="1"
+                            
+               
+                        TextColor="Black"
+                    BorderColor="#D9D9D9"
+                BackgroundColor="White"
+                         
+                        Command="{Binding RegisterCommand}"
+                                 CommandParameter="Sign Up"
+                        Text="{x:Static Resource:AppResource.String14}"
+                    x:Name="label14"  FontFamily="Regular" FontAttributes="Bold" Padding="0">
+                        </Button>
+
+                    </Grid>
+
+
+                </StackLayout>
+
+
+            </StackLayout>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
